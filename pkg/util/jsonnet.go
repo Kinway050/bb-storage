@@ -7,10 +7,10 @@ import (
 
 	"github.com/google/go-jsonnet"
 
+	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/proto"
 )
 
 // UnmarshalConfigurationFromFile reads a Jsonnet file, evaluates it and

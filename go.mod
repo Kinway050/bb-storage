@@ -6,7 +6,7 @@ replace github.com/gordonklaus/ineffassign => github.com/gordonklaus/ineffassign
 
 replace mvdan.cc/gofumpt => mvdan.cc/gofumpt v0.3.0
 
-replace google.golang.org/protobuf/proto => github.com/golang/protobuf/proto v1.5.2
+replace github.com/golang/protobuf/proto => github.com/golang/protobuf/proto v1.5.2
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.15.0

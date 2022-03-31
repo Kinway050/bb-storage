@@ -6,7 +6,7 @@ import (
 
 	"github.com/buildbarn/bb-storage/pkg/digest"
 
-	"google.golang.org/protobuf/proto"
+	"github.com/golang/protobuf/proto"
 )
 
 const (

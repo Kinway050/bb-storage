@@ -3,7 +3,7 @@ package buffer
 import (
 	"io"
 
-	"google.golang.org/protobuf/proto"
+	"github.com/golang/protobuf/proto"
 )
 
 type errorBuffer struct {
