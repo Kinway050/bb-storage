@@ -10,7 +10,9 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"google.golang.org/protobuf/proto"
+
+	//"google.golang.org/protobuf/proto"
+	"github.com/golang/protobuf/proto"
 )
 
 type mergingProvider struct {
