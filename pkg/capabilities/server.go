@@ -8,7 +8,8 @@ import (
 	"github.com/buildbarn/bb-storage/pkg/digest"
 	"github.com/buildbarn/bb-storage/pkg/util"
 
-	"google.golang.org/protobuf/proto"
+	//"google.golang.org/protobuf/proto"
+	"github.com/golang/protobuf/proto"
 )
 
 type server struct {
