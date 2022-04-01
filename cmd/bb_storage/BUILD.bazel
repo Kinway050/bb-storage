@@ -38,9 +38,15 @@ go_image(
     pure = "on",
     visibility = ["//visibility:public"],
 )
+go_image(
+    name = "bb_storage_container1",
+    embed = [":bb_storage_lib"],
+    pure = "on",
+    visibility = ["//visibility:public"],
+)
 
 container_push_official(
     name = "bb_storage_container_push",
     component = "bb-storage",
-    image = ":bb_storage_container",
+    image = ":bb_storage_container1",
 )
