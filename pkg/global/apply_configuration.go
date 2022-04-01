@@ -1,7 +1,7 @@
 package global
 
 import (
-	"context"
+	//"context"
 	"io"
 	"log"
 	"net/http"
@@ -30,17 +30,17 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+	/*"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"go.opentelemetry.io/contrib/propagators/b3"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/jaeger"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
 	"go.opentelemetry.io/otel/propagation"
-	"go.opentelemetry.io/otel/sdk/resource"
+	"go.opentelemetry.io/otel/sdk/resource"*/
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
-	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
-	"go.opentelemetry.io/otel/trace"
+	//semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
+	//"go.opentelemetry.io/otel/trace"
 )
 
 // LifecycleState is returned by ApplyConfiguration. It can be used by
@@ -122,7 +122,8 @@ func ApplyConfiguration(configuration *pb.Configuration) (*LifecycleState, bb_gr
 
 	// Perform tracing using OpenTelemetry.
 	var activeSpansReportingHTTPHandler *bb_otel.ActiveSpansReportingHTTPHandler
-	if tracingConfiguration, enableActiveSpans := configuration.GetTracing(), configuration.GetDiagnosticsHttpServer().GetEnableActiveSpans(); tracingConfiguration != nil || enableActiveSpans {
+
+	/*if tracingConfiguration, enableActiveSpans := configuration.GetTracing(), configuration.GetDiagnosticsHttpServer().GetEnableActiveSpans(); tracingConfiguration != nil || enableActiveSpans {
 		tracerProvider := trace.NewNoopTracerProvider()
 		if tracingConfiguration != nil {
 			// Special gRPC client factory that doesn't have tracing
@@ -271,7 +272,7 @@ func ApplyConfiguration(configuration *pb.Configuration) (*LifecycleState, bb_gr
 		grpcUnaryInterceptors = append(grpcUnaryInterceptors, otelgrpc.UnaryClientInterceptor())
 		grpcStreamInterceptors = append(grpcStreamInterceptors, otelgrpc.StreamClientInterceptor())
 	}
-
+	*/
 	// Enable mutex profiling.
 	runtime.SetMutexProfileFraction(int(configuration.GetMutexProfileFraction()))
 
