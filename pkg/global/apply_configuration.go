@@ -122,6 +122,7 @@ func ApplyConfiguration(configuration *pb.Configuration) (*LifecycleState, bb_gr
 
 	// Perform tracing using OpenTelemetry.
 	var activeSpansReportingHTTPHandler *bb_otel.ActiveSpansReportingHTTPHandler
+
 	if tracingConfiguration, enableActiveSpans := configuration.GetTracing(), configuration.GetDiagnosticsHttpServer().GetEnableActiveSpans(); tracingConfiguration != nil || enableActiveSpans {
 		tracerProvider := trace.NewNoopTracerProvider()
 		if tracingConfiguration != nil {

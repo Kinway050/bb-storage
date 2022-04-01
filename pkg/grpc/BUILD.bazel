@@ -51,6 +51,7 @@ go_library(
         "@org_golang_google_grpc//status",
         "@org_golang_google_protobuf//encoding/prototext",
         "@org_golang_google_protobuf//proto",
+        "@com_github_golang_protobuf//proto",
     ],
 )
 
