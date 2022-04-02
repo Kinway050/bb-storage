@@ -13,9 +13,9 @@ import (
 	pb "github.com/buildbarn/bb-storage/pkg/proto/blobstore/local"
 	"github.com/prometheus/client_golang/prometheus"
 
+	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"google.golang.org/protobuf/proto"
 )
 
 var (
